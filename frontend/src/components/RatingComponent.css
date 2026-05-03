@@ -1,0 +1,51 @@
+:root {
+  --primary-blue: #8B6F47;
+  --light-blue: #B8956A;
+  --lighter-blue: #E8DCC8;
+  --white: #ffffff;
+  --gray-light: #F5E6D3;
+  --gray-medium: #D4C4B0;
+  --gray-dark: #7B6B5E;
+  --text-dark: #3E3E3E;
+  --star-color: #fbbf24;
+}
+
+.rating-component {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.star.full {
+  color: var(--star-color);
+}
+
+.star.half {
+  color: var(--star-color);
+  opacity: 0.5;
+}
+
+.star.empty {
+  color: var(--gray-medium);
+}
+
+.rating-text {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.reviews-text {
+  color: var(--gray-dark);
+  font-size: 13px;
+}

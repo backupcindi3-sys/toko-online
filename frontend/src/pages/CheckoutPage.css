@@ -1,0 +1,86 @@
+.checkout-page {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.checkout-container h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.checkout-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.order-summary, .shipping-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  flex: 1;
+  min-width: 300px;
+}
+
+.order-summary h3, .shipping-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-items {
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding-top: 15px;
+  border-top: 2px solid #eee;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.proceed-btn {
+  width: 100%;
+  padding: 15px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.proceed-btn:hover {
+  background: #333;
+}

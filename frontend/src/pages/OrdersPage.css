@@ -1,0 +1,120 @@
+.orders-page {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.orders-container h1 {
+  margin-bottom: 30px;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 50px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.no-orders p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.order-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.order-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-date {
+  font-weight: 600;
+  color: #111;
+}
+
+.order-id {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status-pending { background: #fff3cd; color: #856404; }
+.status-paid { background: #d4edda; color: #155724; }
+.status-processing { background: #cce5ff; color: #004085; }
+.status-shipped { background: #e2e3e5; color: #383d41; }
+.status-delivered { background: #d4edda; color: #155724; }
+.status-cancelled { background: #f8d7da; color: #721c24; }
+
+.order-items {
+  padding: 20px;
+}
+
+.order-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.order-item:last-child {
+  margin-bottom: 0;
+}
+
+.order-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item-details h4 {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+}
+
+.item-details p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.order-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  background: #fafafa;
+}
+
+.total-amount {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.total-amount strong {
+  color: #e63946;
+}
