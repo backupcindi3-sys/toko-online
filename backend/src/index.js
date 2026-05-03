@@ -16,13 +16,28 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose
-  .connect(process.env.MONGODB_URI, {
-    serverSelectionTimeoutMS: 5000,
-    socketTimeoutMS: 45000,
-  })
-  .then(() => console.log('MongoDB berhasil terhubung'))
-  .catch((error) => console.error('Error koneksi MongoDB:', error));
+let isConnected = false;
+const connectDB = async () => {
+  if (isConnected) return;
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      serverSelectionTimeoutMS: 10000,
+      socketTimeoutMS: 45000,
+    });
+    isConnected = true;
+    console.log('MongoDB berhasil terhubung');
+  } catch (error) {
+    console.error('Error koneksi MongoDB:', error);
+  }
+};
+
+// Middleware to ensure DB connection
+app.use(async (req, res, next) => {
+  await connectDB();
+  next();
+});
+
+mongoose.set('bufferCommands', false);
 
 // Routes
 app.use('/auth', authRoutes);
