@@ -17,7 +17,10 @@ app.use(express.json());
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGODB_URI, {
+    serverSelectionTimeoutMS: 5000,
+    socketTimeoutMS: 45000,
+  })
   .then(() => console.log('MongoDB berhasil terhubung'))
   .catch((error) => console.error('Error koneksi MongoDB:', error));
 
